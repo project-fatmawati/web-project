@@ -7,7 +7,12 @@ body {
 }
 
 nav {
-    /* background-color: #E1F0DA; */
+    position: sticky;
+    top: 0;
+    margin: 2px;
+    padding: 5px;
+    z-index: 1000;
+    background-color: whitesmoke;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -17,6 +22,12 @@ nav {
 
 .navbar-brand:hover, .navbar-nav .nav-link:hover {
     color: #427898 !important;
+}
+
+.logo-img {
+    margin-left: 20px;
+    height: 50px;
+    width: auto;
 }
 
 .dropdown-menu {
@@ -31,4 +42,30 @@ nav {
 .nav-link {
     font-size: 1rem;
     padding: 10px;
+}
+
+.btn-outline-primary {
+    color: #427898;
+    border-color: #427898;
+}
+
+.btn-outline-primary:hover {
+    background-color: #427898;
+    color: whitesmoke;
+}
+
+.btn-outline-primary {
+    margin-right: 20px;
+    width: 100px;
+    padding: 10px 20px;
+    background-color: #427898;
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    transition: #427898 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #48cfcb;
+    color: beige;
 }
