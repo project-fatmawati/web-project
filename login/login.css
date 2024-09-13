@@ -29,73 +29,190 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* Tambahan styling untuk header */
+/* Header Styling */
+header {
+  background-color: var(--borderColor);
+  padding: .6rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #007BFF;
+}
+
+/* Layouting for the Form */
 body {
-    background-color: #f5f5f5;
-    color: rgba(0, 0, 0, 0.685);
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
 }
 
-nav {
-    position: sticky;
-    top: 0;
-    margin: 2px;
-    padding: 5px;
-    z-index: 1000;
-    background-color: whitesmoke;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.form-container {
+  margin-top: 100px; /* Ensure the form is positioned below the fixed header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px); /* Subtract the height of the header */
 }
 
-.navbar-brand, .navbar-nav .nav-link {
-    color: rgba(0, 0, 0, 0.808) !important;
+.form-content {
+  background-color: #ffffff;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
 }
 
-.navbar-brand:hover, .navbar-nav .nav-link:hover {
-    color: #427898 !important;
+/* Styling for the Form Logo */
+.form-logo {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.logo-img {
-    margin-left: 20px;
-    height: 50px;
-    width: auto;
+.form-logo img {
+  width: 60px; /* Adjust the size of the logo here */
+  height: auto;
 }
 
-.dropdown-menu {
-    background-color: whitesmoke;
-    border-radius: 5px;
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
-.dropdown-item:hover {
-    color: #427898 !important;
+p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.nav-link {
-    font-size: 1rem;
-    padding: 10px;
+.separator {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
 }
 
-.btn-outline-primary {
-    color: #427898;
-    border-color: #427898;
+.separator::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
 }
 
-.btn-outline-primary:hover {
-    background-color: #427898;
-    color: whitesmoke;
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
 }
 
-.btn-outline-primary {
-    margin-right: 20px;
-    width: 100px;
-    padding: 10px 20px;
-    background-color: #427898;
-    color: whitesmoke;
-    border: none;
-    border-radius: 5px;
-    transition: #427898 0.3s ease;
+/* Checkbox and Text Horizontal Alignment */
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
-.btn-outline-primary:hover {
-    background-color: #48cfcb;
-    color: beige;
+.remember-forgot label {
+  display: flex;
+  align-items: center;
 }
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkbox-group label input {
+  margin-right: 10px;
+}
+
+button.login-btn,
+button.signup-btn {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button.login-btn:hover,
+button.signup-btn:hover {
+  background-color: #0056b3;
+}
+
+.signup-link,
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signup-link a,
+.login-link a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.signup-link a:hover,
+.login-link a:hover {
+  text-decoration: underline;
+} */
+
