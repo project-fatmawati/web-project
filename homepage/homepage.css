@@ -57,7 +57,7 @@ h2 {
 }
 
  nav {
-    position:sticky;
+    position:fixed;
     top: 0;
     margin: 2px;
     padding: 5px;
@@ -228,6 +228,7 @@ margin: 20px;
 
 
 /*SECTION NEWSLETTER*/
+
 #btn-subscribe{
     padding: 7px;
     font-size: 20px;
