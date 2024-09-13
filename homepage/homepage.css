@@ -165,19 +165,19 @@ h2 {
 }
 
 #btn-katalog{
-    width: 200px;
+    width: 400px;
     padding: 15px;
     font-size: 20px;
-    background-color: var(--warna-text);
-    color: whitesmoke;
-    text-align: center;
+    font-weight: 500;
+    background-color: var(--warna-tersier);
+    color: var(--warna-text);
     border: none;
-    border-radius: 8px;
+    text-align: center;
     transition: var(--warna-text) 0.3s ease;
 }
 
 #btn-katalog:hover {
-    background-color: var(--warna-tersier);
+    background-color: var(--warana-kuning);
     color: var(--warna-text)
 }
 
@@ -221,8 +221,9 @@ background-color: var(--warna-putih2);
 
 }
 .accordion-button {
-    background-color: var(--warna-tersier);
+    background-color: var(--warna-putih2);
     font-size: 20px;
+    color: var(--warna-premier)
 }
 
 
@@ -244,15 +245,38 @@ background-color: var(--warna-putih2);
 }
 
 
+/*SECTION CONTACT*/
+
+.sitelink a {
+    padding: 2px;
+}
+.sitelink-text:hover {
+    color:#f5bd41;
+}
+
 /*SECTION FOOTER*/
 ion-icon {
     font-size:30px;
+    padding:10px;
+}
+.logo-facebook{
+    color:#1876f2;
+}
+
+.logo-instagram{
+    color:#fd0779;
+}
+
+.logo-youtube{
+    color:#fe0000;
 }
 
 .copyright {
     background-color: var(--warna-premier);
     padding: 20px;
 }
+
+
 
 /*RESPONSIVE*/
 

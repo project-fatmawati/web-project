@@ -11,6 +11,9 @@
     <link rel="stylesheet" type="text/css" href="homepage.css">
     <script src="homepage.js" defer ></script>
 
+<!--AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>BarterStyle</title>
 
 </head>
@@ -67,7 +70,7 @@
   <section class="hero-section pb-5 py-5">
   <div class="container pb-5 py-5">
     <div class="row ">
-        <div class=" banner-text col-12 col-lg-7">
+        <div class=" banner-text col-12 col-lg-7" data-aos="fade-up" data-aos-duration="2000" >
           <h1 class="text-black fw-bold">Rajanya Barter Pakaian, <br> Siap Tukaran.</h1>
           <p class="text-black pt-4">“Jadilah bagian dari Gerakan Fashion Berkelanjutan. Tukarkan Pakaianmu, Perbarui Gaya, dan Selamatkan Bumi.”</p>
           <button type="button" id="btn-banner">Mulai Tukar</button>
@@ -86,11 +89,11 @@
         <div class="container text-center py-5">
             <div class="row">
             <h2 class="text-dark fw-bold text-center pb-2"> Tukaran Pakaian Yuk. </h2>
-            <p class="pb-5 h4">"Ambil Bagian dari Gerakan Sustainability Fashion dengan Menukarkan Pakaian Anda Sekarang"</p>
+            <p class="pb-5 h4" data-aos="fade-up">"Ambil Bagian dari Gerakan Sustainability Fashion dengan Menukarkan Pakaian Anda Sekarang"</p>
         </div>
         <div class="container py-4">
             <div class="container text-center">
-                <div class="row gap-3 justify-content-md-center">
+                <div class="row gap-3 justify-content-md-center" data-aos="fade-up" data-aos-duration="2000">
                     <div class="col">
                         <div class="card" style="width: 15rem;">
                             <img src="/homepage/Asset homepage/6.png" class="card-img-top" alt="...">
@@ -194,7 +197,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col"> 
-                    <div class="accordion" id="accordionExample">
+                    <div class="accordion" id="accordionExample" data-aos="fade-up" data-aos-duration="2000">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Apa itu BarterStyle? </button>
@@ -271,35 +274,41 @@
             <div class="row">
                 <div class="col-12 col-lg-6 mt-2">
                     <img  id="image-footer" src="/homepage/Asset homepage/Logo.png">
-                    <p class="text-black pt-3 pe-10" style="font-size:15px;">Sebuah platform yang mengajak Anda untuk berpartisipasi dalam revolusi fashion yang lebih berkelanjutan. Dengan BarterStyle, Anda dapat memperpanjang umur pakai pakaian Anda, mengurangi limbah fashion, dan menemukan gaya baru yang unik.</p>
+                    <p class="text-black pt-3 pe-10" style="font-size:15px;">Sebuah platform yang mengajak Anda untuk berpartisipasi dalam revolusi fashion berkelanjutan. Dengan BarterStyle, Anda dapat memperpanjang umur pakai pakaian Anda, mengurangi limbah fashion, dan menemukan gaya baru yang unik.</p>
                     <a href="mailto:info@Barterstyle.com" style="font-size:15px;">info@barterstyle.com</a>
                 </div>
                 <div class="col-12 col-lg-3 mt-2">
                     <h4 class="fw-bold pb-3 text-black ">Site Link</h4>
-                        <div class="d-flex flex-column text-black">
-                            <a href="#homepage.html" class="text-black" style="font-size: small;"> Home</a>
-                            <a href="#" class="text-black" style="font-size: small;"> Tentang Kami</a>
-                            <a href="#" class="text-black" style="font-size: small;"> Event</a>
-                            <a href="#" class="text-black" style="font-size: small;"> Home</a>
+                        <div class="sitelink d-flex flex-column text-black">
+                            <a href="#homepage.html" class="sitelink text-black" style="font-size:medium;"> Home</a>
+                            <a href="#homepage.html" class="sitelink-text text-black" style="font-size: medium;"> Tentang Kami</a>
+                            <a href="#homepage.html" class="sitelink-text text-black" style="font-size: medium;"> Event</a>
+                            <a href="#homepage.html" class="sitelink-text text-black" style="font-size: medium;"> Donasi</a>
                         </div>
                 </div>
                 <div class="col-12 col-lg-3 mt-2">
-                    <h4 class="fw-bold text-black pb-3">Sosial Media</h4>
+                    <h4 class="fw-bold text-black">Sosial Media</h4>
                         <div class="d-flex">
-                            <a href="#" class="text-dark px-4"> <ion-icon name="logo-facebook" class="icon" ></ion-icon> </a>
-                            <a href="#" class="text-dark px-4"> <ion-icon name="logo-instagram" class="icon"></ion-icon></a>
-                            <a href="#" class="text-dark px-4"> <ion-icon name="logo-youtube" class="icon"></ion-icon></a>
+                            <a href="#" class="logo-facebook"> <ion-icon name="logo-facebook" class="icon" ></ion-icon> </a>
+                            <a href="#" class="logo-instagram"> <ion-icon name="logo-instagram" class="icon"></ion-icon></a>
+                            <a href="#" class="logo-youtube"> <ion-icon name="logo-youtube" class="icon"></ion-icon></a>
                         </div>
                 </div>
             </div>
          </div>
     </section>
 
-    <Footer>
+    <footer>
         <div class="text-center">
-            <p class="fw-bold copyright" style="font-size: 20px;">&copy; BarterStyle 2024 all right reserved by Fatmawati</p>
+            <p class="copyright text-black" style="font-size: 18px;">&copy; BarterStyle 2024 all right reserved by Fatmawati</p>
         </div>
     </footer>
+
+<!--AOS-->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 <!--ICON-->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

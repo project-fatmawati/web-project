@@ -12,9 +12,13 @@
     <link rel="stylesheet" type="text/css" href="homepage.css">
     <script src="homepageuser.js" defer ></script>
 
+<!--AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <title>Homepage User</title>
 
 <style>
+
     #btn-banner-user {
         background-color: #f5bd41;
         width: 180px;
@@ -33,6 +37,12 @@
         color:#f5bd41;
 
     }
+    .copyright {
+    background-color: var(--warna-premier);
+    padding: 20px;
+}
+
+    /*SECTION CONTACT*/
 
 </style>
 
@@ -84,7 +94,8 @@
     <div class="container py-5">
       <div class="row">
           <div class=" banner-text col-12 col-lg-7">
-            <h2 class="text-black fw-bold">Selamat Datang Kak <br> Siap Tukaran?</h2>
+            <h2 class="text-black fw-bold mb-4" data-aos="fade-right" data-aos-duration="2000">Selamat Datang Kak </h2>
+            <h2 class="text-black fw-bold">Siap Tukaran?</h2>
             <p class="text-black pt-4">“Jadilah bagian dari Gerakan Fashion Berkelanjutan bersama BarterStyle. Tukarkan Pakaianmu, Perbarui Gaya, dan Selamatkan Bumi.”</p>
             <button type="button" id="btn-banner-user">Lihat Katalog</button>
           </div>
@@ -104,24 +115,24 @@
             <div class="row">
                 <div class="col-12 col-lg-6 mt-2">
                     <img  id="image-footer" src="/homepage/Asset homepage/Logo.png">
-                    <p class="text-black pt-3 pe-10" style="font-size:15px;">Sebuah platform yang mengajak Anda untuk berpartisipasi dalam revolusi fashion yang lebih berkelanjutan. Dengan BarterStyle, Anda dapat memperpanjang umur pakai pakaian Anda, mengurangi limbah fashion, dan menemukan gaya baru yang unik.</p>
+                    <p class="text-black pt-3 " style="font-size:15px;">Sebuah platform yang mengajak Anda untuk berpartisipasi dalam revolusi fashion yang lebih berkelanjutan. Dengan BarterStyle, Anda dapat memperpanjang umur pakai pakaian Anda, mengurangi limbah fashion, dan menemukan gaya baru yang unik.</p>
                     <a href="mailto:info@Barterstyle.com" style="font-size:15px;">info@barterstyle.com</a>
                 </div>
                 <div class="col-12 col-lg-3 mt-2">
-                    <h4 class="fw-bold pb-3 text-black ">Site Link</h4>
+                    <h4 class="fw-bold text-black ">Site Link</h4>
                         <div class="d-flex flex-column text-black">
-                            <a href="#homepage.html" class="text-black" style="font-size: small;"> Home</a>
-                            <a href="#" class="text-black" style="font-size: small;"> Tentang Kami</a>
-                            <a href="#" class="text-black" style="font-size: small;"> Event</a>
-                            <a href="#" class="text-black" style="font-size: small;"> Home</a>
+                            <a href="#homepage.html" class="text-black" style="font-size: medium;"> Home</a>
+                            <a href="#" class="text-black" style="font-size: medium;"> Tentang Kami</a>
+                            <a href="#" class="text-black" style="font-size: medium;"> Event</a>
+                            <a href="#" class="text-black" style="font-size: medium;"> Home</a>
                         </div>
                 </div>
                 <div class="col-12 col-lg-3 mt-2">
                     <h4 class="fw-bold text-black pb-3">Sosial Media</h4>
                         <div class="d-flex">
-                            <a href="#" class="text-dark px-4"> <ion-icon name="logo-facebook" class="icon" ></ion-icon> </a>
-                            <a href="#" class="text-dark px-4"> <ion-icon name="logo-instagram" class="icon"></ion-icon></a>
-                            <a href="#" class="text-dark px-4"> <ion-icon name="logo-youtube" class="icon"></ion-icon></a>
+                            <a href="#" class="logo-facebook"> <ion-icon name="logo-facebook" class="icon" ></ion-icon> </a>
+                            <a href="#" class="logo-instagram"> <ion-icon name="logo-instagram" class="icon"></ion-icon></a>
+                            <a href="#" class="logo-youtube"> <ion-icon name="logo-youtube" class="icon"></ion-icon></a>
                         </div>
                 </div>
             </div>
@@ -129,10 +140,17 @@
     </section>
 
     <footer>
-        <div class="text-center">
-            <p class="fw-bold copyright" style="font-size: 20px;">&copy; BarterStyle 2024 all right reserved by Fatmawati</p>
+        <div class="text-center text-black">
+            <p class="copyright" style="font-size: 20px;">&copy; BarterStyle 2024 all right reserved by Fatmawati</p>
         </div>
     </footer>
+
+<!--AOS-->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
 <!--ICON-->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
