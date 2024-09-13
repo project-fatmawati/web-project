@@ -12,55 +12,92 @@
     <link rel="stylesheet" href="homepage.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="asset/Logo.png" alt="Logo Tukar Baju" class="logo-img">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="tukarBajuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Tukar Baju
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="tukarBajuDropdown">
-                            <li><a class="dropdown-item" href="#">Cara Tukar Baju</a></li>
-                            <li><a class="dropdown-item" href="#">Tambah Baju</a></li>
-                            <li><a class="dropdown-item" href="#">Cari Pakaian</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Katalog Pakaian</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Tentang Kami</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Profil</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+                <div class="position-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#personal-info">Informasi Pribadi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#catalog">Katalog Baju</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#transaction-history">Riwayat Transaksi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#settings">Preferensi dan Pengaturan Akun</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#notifications">Pesan dan Notifikasi</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-image"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">Tukar Pakaian, Selamatkan Lingkungan!</h1>
-            <p class="hero-subtitle">Bergabunglah dengan kami dan mulailah bertukar pakaian hari ini untuk masa depan yang lebih baik.</p>
-            <div class="hero-buttons">
-                <a href="#" class="btn btn-primary">Mulai Tukar Sekarang</a>
-                <a href="#" class="btn btn-outline-light">Pelajari Lebih Lanjut</a>
-            </div>
-        </div>
-    </section>
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <!-- Informasi Pribadi -->
+                <section id="personal-info" class="mt-4">
+                    <h2>Informasi Pribadi</h2>
+                    <form id="editProfileForm">
+                        <div class="mb-3">
+                            <label for="profilePic" class="form-label">Foto Profil</label>
+                            <input type="file" class="form-control" id="profilePic" accept="image/*">
+                        </div>
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Nama Lengkap</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Nama Lengkap">
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Alamat</label>
+                            <input type="text" class="form-control" id="address" placeholder="Alamat">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phoneNumber" class="form-label">Nomor Telepon</label>
+                            <input type="text" class="form-control" id="phoneNumber" placeholder="Nomor Telepon">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                    </form>
+                </section>
 
+                <!-- Katalog Baju -->
+                <section id="catalog" class="mt-4">
+                    <h2>Katalog Baju</h2>
+                    <div id="catalogItems" class="d-flex flex-wrap">
+                        <!-- Menambahkan gambar disini -->
+                    </div>
+                    <button class="btn btn-success mt-3" onclick="addItem()">Tambah Baju</button>
+                </section>
+
+                <!-- Riwayat Transaksi -->
+                <section id="transaction-history" class="mt-4">
+                    <h2>Riwayat Transaksi</h2>
+                    <ul class="list-group" id="transactionHistory">
+                        <!-- Menambahkan riwayat barter disini -->
+                    </ul>
+                </section>
+
+                <!-- Preferensi dan Pengaturan Akun -->
+                <section id="settings" class="mt-4">
+                    <h2>Preferensi dan Pengaturan Akun</h2>
+                    <button class="btn btn-secondary">Ubah Kata Sandi</button>
+                    <button class="btn btn-secondary">Pengaturan Notifikasi</button>
+                </section>
+
+                <!-- Pesan dan Notifikasi -->
+                <section id="notifications" class="mt-4">
+                    <h2>Pesan dan Notifikasi</h2>
+                    <div id="notificationList">
+                        <!-- Adanya notifikasi disini -->
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    
     <!-- Bootsrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
