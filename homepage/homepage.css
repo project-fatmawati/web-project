@@ -29,7 +29,7 @@ body {
 }
 
 h1 {
-    font-size: 5.2rem;
+    font-size: 3.5rem;
     letter-spacing: -0.4;
     line-height: 1.2;
 }
@@ -131,15 +131,17 @@ h2 {
     font-size:1.5rem;
     line-height: 1.7;
     letter-spacing: 0.3px;
+    margin-top: 20px;
 }
 
 #btn-banner{
-    width: 120px;
-    padding: 8px 8px;
-    margin: 2px 2px;
-    font-size: 16px;
-    background-color: #427898;
-    color: whitesmoke;
+    width: 150px;
+    padding: 10px 10px;
+    margin-top: 30px;;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: var(--warana-kuning);
+    color: var(--warna-text);
     text-align: center;
     border: none;
     border-radius: 8px;
@@ -165,7 +167,7 @@ h2 {
 }
 
 #btn-katalog{
-    width: 400px;
+    width: 280px;
     padding: 15px;
     font-size: 20px;
     font-weight: 500;
@@ -184,14 +186,12 @@ h2 {
 .card {
 border-radius: 25px;
 background-color: var(--warna-putih2);
+margin: 20px;
 
 }
 .card:hover {
     background-color: var(--warna-sekunder);
     cursor: pointer;
-}
-.card-body {
-    margin:10px;
 }
 
 .card-body h5{
@@ -299,3 +299,11 @@ ion-icon {
 
 }
 
+
+@media (max-width:1400px) {
+    h1{
+        font-size: 3rem;
+        letter-spacing: -0.4;
+        line-height: 1.2;   
+    }
+}
