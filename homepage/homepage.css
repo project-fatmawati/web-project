@@ -214,6 +214,13 @@ background-color: var(--warna-putih2);
     color: var(--warna-text)
 }
 
+/*SECTION FAQ*/
+.container-faq-accordion {
+    justify-items: center;
+}
+
+
+
 
 /*SECTION NEWSLETTER*/
 #btn-subscribe{
@@ -245,10 +252,10 @@ ion-icon {
 
 /*RESPONSIVE*/
 
-@media (max-width:982px) {
+@media (max-width:1000px) {
     nav .navbar-nav {
         background-color: var(--warna-sekunder);
-        padding: 2REM;
+        padding: 2rem;
         gap: 5px;
 
     }
@@ -256,6 +263,7 @@ ion-icon {
         text-align:center;
 
     }
+
     h1 {
         font-size: 4rem;
         margin-bottom:1rem;
