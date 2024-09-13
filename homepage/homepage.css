@@ -170,8 +170,8 @@ h2 {
 }
 
 #btn-katalog:hover {
-    background-color: var(--warna-button);
-    color: var(--warna-sekunder)
+    background-color: var(--warna-tersier);
+    color: var(--warna-text)
 }
 
 .card {
@@ -183,6 +183,30 @@ background-color: var(--warna-putih2);
     background-color: var(--warna-sekunder);
     cursor: pointer;
 }
+.card-body {
+    margin:10px;
+}
+
+.card-body h5{
+    font-size: 25px;;
+}
+
+#btn-product{
+    padding: 7px;
+    font-size: 15px;
+    background-color: #f5bd41;
+    color: var(--warna-text);
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    transition: #f5bd41 0.3s ease;
+}
+
+#btn-product:hover {
+    background-color: var(--warna-tersier);
+    color: var(--warna-text)
+}
+
 
 /*SECTION NEWSLETTER*/
 
