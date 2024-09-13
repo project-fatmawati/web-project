@@ -69,3 +69,77 @@ nav {
     background-color: #48cfcb;
     color: beige;
 }
+
+.hero-section {
+    display: flex;
+    height: 100vh;
+    background-color: #b5d3e4;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    width: 45%;
+    height: 80%;
+    background-image: url('asset/img1.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin-right: 50px;
+}
+
+.hero-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    text-align: left;
+    color: black;
+}
+
+.hero-title {
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-primary {
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    background-color: #427898;
+    border: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #365f77;
+}
+
+.btn-outline-light {
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    border: 2px solid #427898;
+    border-radius: 30px;
+    background-color: transparent;
+    color: #427898;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    background-color: #427898;
+    color: white;
+}
