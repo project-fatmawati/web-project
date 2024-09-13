@@ -57,7 +57,7 @@ h2 {
 }
 
  nav {
-    position: sticky;
+    position:sticky;
     top: 0;
     margin: 2px;
     padding: 5px;
@@ -215,11 +215,15 @@ background-color: var(--warna-putih2);
 }
 
 /*SECTION FAQ*/
-.container-faq-accordion {
-    justify-items: center;
+
+.accordion {
+    padding: 5rem;
+
 }
-
-
+.accordion-button {
+    background-color: var(--warna-tersier);
+    font-size: 20px;
+}
 
 
 /*SECTION NEWSLETTER*/
