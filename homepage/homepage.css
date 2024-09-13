@@ -8,6 +8,7 @@
     --warna-tersier: #48cfcb;
     --warna-button: #427898;
     --warna-text: #000000;
+    --warana-kuning:#f5bd41;
 
 }
 
@@ -149,6 +150,12 @@ h2 {
     background-color: var(--warna-text);
     color: var(--warna-sekunder)
 }
+ 
+.banner-text {
+   
+  animation: animate__backInUp;
+  animation-duration: 5s;  
+}
 
 /*SECTION CARD*/
 
@@ -209,6 +216,21 @@ background-color: var(--warna-putih2);
 
 
 /*SECTION NEWSLETTER*/
+#btn-subscribe{
+    padding: 7px;
+    font-size: 20px;
+    background-color: var(--warna-tersier);
+    color: var(--warna-text);
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    transition: var(--warna-tersier) 0.3s ease;
+}
+
+#btn-subscribe:hover {
+    background-color: var(--warana-kuning);
+    color: var(--warna-text)
+}
 
 
 /*SECTION FOOTER*/
@@ -240,3 +262,4 @@ ion-icon {
     }
 
 }
+
