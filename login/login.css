@@ -68,13 +68,13 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: var(--grayColor);
   font-size: 1rem;
   transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  color: #007BFF;
+  color: var(--primaryIconColorHover);
 }
 
 /* Layouting for the Form */
@@ -86,49 +86,49 @@ body {
 }
 
 .form-container {
-  margin-top: 100px; /* Ensure the form is positioned below the fixed header */
+  margin-top: 6.25rem; /* Ensure the form is positioned below the fixed header */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 100px); /* Subtract the height of the header */
+  height: calc(100vh - 6.25rem); /* Subtract the height of the header */
 }
 
 .form-content {
   background-color: #ffffff;
-  padding: 30px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px .6rem rgba(0, 0, 0, 0.1);
+  border-radius: var(--itemBorderradius);
   width: 100%;
-  max-width: 400px;
+  max-width: 25rem;
 }
 
 /* Styling for the Form Logo */
 .form-logo {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .form-logo img {
-  width: 60px; /* Adjust the size of the logo here */
+  width: 4rem; /* Adjust the size of the logo here */
   height: auto;
 }
 
 h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin-bottom: .625rem;
   text-align: center;
 }
 
 p {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 20px;
+  font-size: 1rem;
+  color: var(--grayColor);
+  margin-bottom: 1.25rem;
   text-align: center;
 }
 
 .separator {
   text-align: center;
-  margin: 20px 0;
+  margin: 1.25rem 0;
   position: relative;
 }
 
@@ -136,7 +136,7 @@ p {
   content: "";
   width: 100%;
   height: 1px;
-  background-color: #ddd;
+  background-color: var(--borderColor);
   position: absolute;
   top: 50%;
   left: 0;
@@ -145,11 +145,11 @@ p {
 
 input {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 14px;
+  padding: .625rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--borderColor);
+  border-radius: var(--itemBorderradius);
+  font-size: .8rem;
 }
 
 /* Checkbox and Text Horizontal Alignment */
@@ -157,62 +157,85 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
 .remember-forgot label {
   display: flex;
-  align-items: center;
+  align-items: baseline;
+  font-size: .8rem;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: center;
+}
+
+.remember-forgot input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2); /* Skala untuk menyamakan ukuran dengan teks */
+}
+
+.remember-forgot a {
+  font-size: .8rem;
+  color: var(--buttonColor);
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  color: var(--primaryColor);
+  text-decoration: underline;
 }
 
 .checkbox-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .checkbox-group label {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: .625rem;
 }
 
 .checkbox-group label input {
-  margin-right: 10px;
+  margin-right: .625rem;
+  color: var(--buttonColor);
 }
 
 button.login-btn,
 button.signup-btn {
-  background-color: #007BFF;
-  color: #fff;
-  padding: 10px 20px;
+  background-color: var(--primaryColor);
+  color: var(--lineColor);
+  padding: .625rem 1.25rem;
   border: none;
-  border-radius: 4px;
+  border-radius: var(--itemBorderradius);
   cursor: pointer;
   width: 100%;
-  font-size: 16px;
-  transition: background-color 0.3s;
+  font-size: 1rem;
+  transition: background-color .5s;
 }
 
 button.login-btn:hover,
 button.signup-btn:hover {
-  background-color: #0056b3;
+  background-color: var(--buttonColor);
+  color: var(--primaryTextColor);
 }
 
 .signup-link,
 .login-link {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .signup-link a,
 .login-link a {
-  color: #007BFF;
+  color: var(--buttonColor);
   text-decoration: none;
 }
 
 .signup-link a:hover,
 .login-link a:hover {
   text-decoration: underline;
-} */
+}
 
