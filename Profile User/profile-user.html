@@ -184,7 +184,7 @@
                     <!-- Pengaturan Privasi -->
                     <div class="mb-4">
                         <h5>Pengaturan Privasi</h5>
-                        <form>
+                        <form id="privacySettingsForm">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="privacyOptions" id="publicProfile" checked>
                                 <label class="form-check-label" for="publicProfile">
@@ -200,10 +200,10 @@
                         </form>
                     </div>
 
-                <!-- Notifikasi -->
+                    <!-- Notifikasi -->
                     <div class="mb-4">
                         <h5>Pengaturan Notifikasi</h5>
-                        <form>
+                        <form id="notificationSettingsForm">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" id="emailNotifications" checked>
                                 <label class="form-check-label" for="emailNotifications">
@@ -222,6 +222,7 @@
                                     Ringkasan Mingguan melalui Email
                                 </label>
                             </div>
+                            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
                         </form>
                     </div>
                 </section>
