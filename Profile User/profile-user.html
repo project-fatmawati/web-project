@@ -122,8 +122,34 @@
                         <img src="asset/image2.png" alt="Blouse Wanita" class="img-catalog">
                         <img src="asset/iamge3.png" alt="Bluse Wanita" class="img-catalog">
                     </div>
-                    <button class="btn btn-success mt-3" onclick="addItem()">Tambah Baju</button>
+                    <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#addItemModal">Tambah Baju</button>
                 </section>
+
+                <!-- Modal Pop-up untuk Tambah Baju -->
+                <div class="modal fade" id="addItemModal" tabindex="-1" aria-labelledby="addItemModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="addItemModalLabel">Tambah Baju</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="addItemForm">
+                                    <!-- Input Form -->
+                                    <div class="mb-3">
+                                        <label for="itemName" class="form-label">Nama Produk</label>
+                                        <input type="text" class="form-control" id="itemName" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="itemImage" class="form-label">Upload Gambar Produk</label>
+                                        <input type="file" class="form-control" id="itemImage" accept="image/*" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Publikasikan</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
 
                 <!-- Riwayat Transaksi -->
                 <section id="transaction-history" class="content-section d-none mt-4">

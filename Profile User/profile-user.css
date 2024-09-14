@@ -70,22 +70,32 @@ nav {
     color: whitesmoke;
 }
 
-.sidebar {
+.container-fluid {
+    display: flex;
+    flex-direction: row;
+}
+
+#sidebar {
+    position: sticky;
     width: 250px;
-    height: 100vh;
-    position: relative;
     top: 0;
+    height: 100vh;
     left: 0;
     z-index: 1;
     background-color: rgba(245, 245, 245, 0.815);
-    padding-top: 130px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-right: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 2px 0 5px;
+    border-right: 1px solid #ddddddad;
+}
+
+#main-content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
 }
 
 @media (min-width: 768px) {
-    .sidebar {
+    #sidebar {
         position: fixed;
         width: 250px;
         padding-top: 130px;
@@ -102,7 +112,7 @@ nav {
 }
 
 @media (max-width: 992px) {
-    .sidebar {
+    #sidebar {
         display: none;
     }
     main {
@@ -138,7 +148,7 @@ main {
 }
 
 @media (max-width: 767.98px) {
-    .sidebar {
+    #sidebar {
         position: static;
         width: 100%;
         padding-top: 20px;
