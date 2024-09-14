@@ -28,3 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const defaultSectionId = defaultLink.getAttribute('data-target');
     showSection(defaultSectionId);
 });
+
+function addItem() {
+    const catalogItems = document.getElementById('catalogItems');
+    const newItem = document.createElement('div');
+    newItem.classList.add('item-card');
+    newItem.innerHTML = 
+}
