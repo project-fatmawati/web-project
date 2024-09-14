@@ -34,4 +34,7 @@ function addItem() {
     const newItem = document.createElement('div');
     newItem.classList.add('item-card');
     newItem.innerHTML = 
+        `<img src="asset/image1.jpg" alt="Jaket Denim" class="img-fluid">
+        <p>Deskripsi baju baru</p>`;
+    catalogItems.appendChild(newItem);
 }
