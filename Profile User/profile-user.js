@@ -43,6 +43,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const defaultSectionId = defaultLink ? defaultLink.getAttribute('data-target') : 'personal-info';
     showSection(defaultSectionId);
 
+    // Fungsi untuk menyimpan katalog ke localStorage
+    function saveCatalogToLocalStorage() {
+        const items = [];
+        const catalogImages = catalogItems.querySelectorAll('img');
+        catalogImages.forEach(img => {
+            items.push({
+                src: img.src,
+                alt: img.alt
+            });
+        });
+        localStorage.setItem('catalogItems', JSON.stringify(items));
+    }
+
+    // Fungsi untuk memuat katalog dari localStorage
+    function loadCatalogFromLocalStorage() {
+        const storedItems = JSON.parse(localStorage.getItem('catalogItems')) || [];
+        storedItems.forEach(item => {
+            const newItem = document.createElement('img');
+            newItem.src = item.src;
+            newItem.alt = item.alt;
+            newItem.classList.add('img-catalog');
+            catalogItems.appendChild(newItem);
+        });
+    }
+
+    loadCatalogFromLocalStorage();
+
     // Form untuk menambahkan katalog baju
     const addItemForm = document.getElementById('addItemForm');
     if (addItemForm) {
@@ -64,6 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 newItem.alt = itemName;
                 newItem.classList.add('img-catalog');
                 catalogItems.appendChild(newItem);
+
+                saveCatalogToLocalStorage();
                 
                 // Menutup modal setelah item ditambahkan
                 const modal = bootstrap.Modal.getInstance(document.getElementById('addItemModal'));
