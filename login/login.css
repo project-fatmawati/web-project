@@ -55,33 +55,11 @@ header {
   height: 40px;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-nav ul li {
-  margin: 0 1rem;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: var(--grayColor);
-  font-size: 1rem;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: var(--primaryIconColorHover);
-}
-
 /* Layouting for the Form */
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
   background-color: #f9f9f9;
 }
 
@@ -90,8 +68,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 6.25rem); /* Subtract the height of the header */
-}
+  height: calc(100vh - 6.25rem);
+} 
 
 .form-content {
   background-color: #ffffff;
@@ -188,20 +166,27 @@ input {
 
 .checkbox-group {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 1.25rem;
+  flex-direction: column; /* Menyusun elemen secara horizontal */
+  /* align-items: left; Membuat checkbox dan teks sejajar vertikal */
+  margin-bottom: 1rem;
+  justify-content: flex-start;
+  /* overflow: rela; */
+   /* Jarak antar grup checkbox */
 }
 
 .checkbox-group label {
-  display: flex;
-  align-items: center;
-  margin-bottom: .625rem;
+  display: flex; /* Menggunakan flexbox untuk menyusun checkbox dan teks */
+  align-items: center; /* Sejajarkan secara vertikal */
+  font-size: 0.8rem; /* Ukuran font untuk teks */
+  white-space: nowrap; /* Menghindari teks terpotong */
+  text-align: left; /* Teks rata kiri */
 }
 
 .checkbox-group label input {
-  margin-right: .625rem;
-  color: var(--buttonColor);
+  margin-right: 0.625rem; /* Memberikan jarak antara checkbox dan teks */
+  color: var(--buttonColor); /* Warna sesuai variabel yang ditentukan */
 }
+
 
 button.login-btn,
 button.signup-btn {
