@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tukar Baju Online</title>
+    <title>Profile User</title>
 
     <!-- Bootsrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -40,7 +40,7 @@
             <!-- Main Content -->
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <!-- Informasi Pribadi -->
-                <section id="personal-info" class="mt-4">
+                <section id="personal-info" class="content-section mt-4 active">
                     <h2>Informasi Pribadi</h2>
                     <form id="editProfileForm">
                         <div class="mb-3">
@@ -64,7 +64,7 @@
                 </section>
 
                 <!-- Katalog Baju -->
-                <section id="catalog" class="mt-4">
+                <section id="catalog" class="content-section d-none mt-4">
                     <h2>Katalog Baju</h2>
                     <div id="catalogItems" class="d-flex flex-wrap">
                         <!-- Menambahkan gambar disini -->
@@ -73,7 +73,7 @@
                 </section>
 
                 <!-- Riwayat Transaksi -->
-                <section id="transaction-history" class="mt-4">
+                <section id="transaction-history" class="content-section d-none mt-4">
                     <h2>Riwayat Transaksi</h2>
                     <ul class="list-group" id="transactionHistory">
                         <!-- Menambahkan riwayat barter disini -->
@@ -81,14 +81,14 @@
                 </section>
 
                 <!-- Preferensi dan Pengaturan Akun -->
-                <section id="settings" class="mt-4">
+                <section id="settings" class="content-section d-none mt-4">
                     <h2>Preferensi dan Pengaturan Akun</h2>
                     <button class="btn btn-secondary">Ubah Kata Sandi</button>
                     <button class="btn btn-secondary">Pengaturan Notifikasi</button>
                 </section>
 
                 <!-- Pesan dan Notifikasi -->
-                <section id="notifications" class="mt-4">
+                <section id="notifications" class="content-section d-none mt-4">
                     <h2>Pesan dan Notifikasi</h2>
                     <div id="notificationList">
                         <!-- Adanya notifikasi disini -->
