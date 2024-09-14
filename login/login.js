@@ -1,95 +1,114 @@
-// Menunggu seluruh halaman dimuat
 document.addEventListener('DOMContentLoaded', function() {
-  // Mengambil elemen-elemen penting
-  const loginForm = document.getElementById('loginForm');
-  const signupForm = document.getElementById('signupForm');
+  const loginDiv = document.getElementById('loginDiv');
+  const signupDiv = document.getElementById('signupDiv');
   const showSignupLink = document.getElementById('showSignup');
   const showLoginLink = document.getElementById('showLogin');
 
   // Fungsi untuk menampilkan form pendaftaran
   showSignupLink.addEventListener('click', function(e) {
       e.preventDefault();
-      loginForm.style.display = 'none';
-      signupForm.style.display = 'block';
+      loginDiv.style.display = 'none';
+      signupDiv.style.display = 'block';
   });
 
   // Fungsi untuk menampilkan form login
   showLoginLink.addEventListener('click', function(e) {
       e.preventDefault();
-      signupForm.style.display = 'none';
-      loginForm.style.display = 'block';
+      signupDiv.style.display = 'none';
+      loginDiv.style.display = 'block';
   });
 
+  // Fungsi untuk reset input form
+  function resetForm(form) {
+      form.reset(); // Reset semua input field dalam form
+  }
+
+  // Fungsi untuk validasi form
+  function validateForm(form) {
+      const inputs = form.querySelectorAll('input[required]');
+      for (let input of inputs) {
+          if (!input.value.trim()) {
+              alert(`Kolom ${input.previousElementSibling.textContent} harus diisi!`);
+              input.focus();
+              return false;
+          }
+      }
+      return true;
+  }
+
   // Fungsi untuk pendaftaran
-  signupForm.addEventListener('submit', function(e) {
+  document.getElementById('signupForm').addEventListener('submit', function(e) {
       e.preventDefault();
 
-      const firstName = document.getElementById('first-name').value;
-      const lastName = document.getElementById('last-name').value;
-      const email = document.getElementById('email-signup').value;
-      const phone = document.getElementById('phone').value;
-      const address = document.getElementById('address').value;
-      const password = document.getElementById('password-signup').value;
-      const confirmPassword = document.getElementById('confirm-password').value;
+      if (!validateForm(this)) {
+          return;
+      }
 
-      // Validasi sederhana
-      if (password !== confirmPassword) {
+      const newUser = {
+          firstName: document.getElementById('first-name').value,
+          lastName: document.getElementById('last-name').value,
+          email: document.getElementById('email-signup').value,
+          phone: document.getElementById('phone').value,
+          address: document.getElementById('address').value,
+          password: document.getElementById('password-signup').value
+      };
+
+      // Validasi password dan konfirmasi password
+      if (newUser.password !== document.getElementById('confirm-password').value) {
           alert('Password dan konfirmasi password tidak cocok!');
           return;
       }
 
-      // Membuat objek user
-      const user = {
-          firstName: firstName,
-          lastName: lastName,
-          email: email,
-          phone: phone,
-          address: address,
-          password: password
-      };
+      // Ambil data pengguna dari localStorage
+      let users = JSON.parse(localStorage.getItem('users')) || {};
 
-      // Menyimpan user ke localStorage
-      localStorage.setItem(email, JSON.stringify(user));
+      // Cek apakah email atau nomor HP sudah digunakan
+      const isEmailTaken = Object.values(users).some(user => user.email === newUser.email);
+      const isPhoneTaken = Object.values(users).some(user => user.phone === newUser.phone);
+
+      if (isEmailTaken) {
+          alert('Email sudah terdaftar! Silakan login.');
+          return;
+      } else if (isPhoneTaken) {
+          alert('Nomor HP sudah terdaftar! Silakan login.');
+          return;
+      }
+
+      // Simpan pengguna baru ke localStorage
+      users[newUser.email] = newUser;
+      localStorage.setItem('users', JSON.stringify(users));
+
+      // Reset form pendaftaran
+      resetForm(document.getElementById('signupForm'));
 
       alert('Pendaftaran berhasil! Silakan login.');
-
-      // Reset form setelah submit
-      signupForm.reset();
-
-      // Kembali ke form login
-      signupForm.style.display = 'none';
-      loginForm.style.display = 'block';
+      signupDiv.style.display = 'none';
+      loginDiv.style.display = 'block';
   });
 
   // Fungsi untuk login
-  loginForm.addEventListener('submit', function(e) {
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
       e.preventDefault();
+
+      if (!validateForm(this)) {
+          return;
+      }
 
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
-      const rememberMe = document.getElementById('rememberMe').checked;
 
-      // Ambil data user dari localStorage berdasarkan email
-      const storedUser = localStorage.getItem(email);
-      
-      // Cek apakah data user ada dan validasi password
-      if (storedUser) {
-          const user = JSON.parse(storedUser);
-          if (user.password === password) {
-              alert('Login berhasil!');
+      // Ambil data pengguna dari localStorage
+      let users = JSON.parse(localStorage.getItem('users')) || {};
 
-              // Jika checkbox "Ingat Saya" dicentang, simpan informasi login
-              if (rememberMe) {
-                  localStorage.setItem('loggedInUser', email);
-              }
+      // Validasi email dan password
+      if (users[email] && users[email].password === password) {
+          alert('Login berhasil!');
+          localStorage.setItem('loggedInUser', email);
 
-              // Reset form login
-              loginForm.reset();
-          } else {
-              alert('Password salah!');
-          }
+          // Reset form login
+          resetForm(document.getElementById('loginForm'));
       } else {
-          alert('Email tidak ditemukan! Silakan daftar terlebih dahulu.');
+          alert('Email atau password salah!');
       }
   });
 });

@@ -5,21 +5,16 @@
 :root {
   --primaryTextColor: #222831;
   --secondaryTextColor: #788181;
-
   --secondaryColor: #427898;
   --primaryColor: #1c75a9;
   --darkColor: #000000;
   --grayColor: #424242;
-
   --borderColor: #f5f5f5;
-  --lineColor: #ffffff;   /* opsional */
-
-  --primaryIconColorHover:#48CFCB;
+  --lineColor: #ffffff;
+  --primaryIconColorHover: #48CFCB;
   --buttonColor: #229799;
-
   --sectionPadding: 6rem 0;
   --itemBorderradius: 0.7rem;
-
 }
 
 * {
@@ -29,11 +24,17 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
 /* Tambahan styling untuk header */
 /* Header Styling */
 header {
   background-color: var(--borderColor);
-  padding: .6rem 0;
+  padding: 1rem 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
   position: fixed;
@@ -55,24 +56,25 @@ header {
   height: 40px;
 }
 
-/* Layouting for the Form */
-body {
-  margin: 0;
-  padding: 0;
-  /* font-family: Arial, sans-serif; */
-  background-color: #f9f9f9;
-}
-
-.form-container {
-  margin-top: 6.25rem; /* Ensure the form is positioned below the fixed header */
+/* .form-container {
+  margin-top: 6.25rem; Ensure the form is positioned below the fixed header
   display: flex;
   justify-content: center;
   align-items: center;
   height: calc(100vh - 6.25rem);
-} 
+} */
+
+.form-container {
+  margin-top: 10rem; /* Adjust space below the header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding-bottom: 3rem;
+}
 
 .form-content {
-  background-color: #ffffff;
+  background-color: var(--lineColor);
   padding: 2rem;
   box-shadow: 0 2px .6rem rgba(0, 0, 0, 0.1);
   border-radius: var(--itemBorderradius);
@@ -83,7 +85,7 @@ body {
 /* Styling for the Form Logo */
 .form-logo {
   text-align: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .form-logo img {
@@ -93,20 +95,20 @@ body {
 
 h2 {
   font-size: 1.5rem;
-  margin-bottom: .625rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
 p {
   font-size: 1rem;
   color: var(--grayColor);
-  margin-bottom: 1.25rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
 .separator {
   text-align: center;
-  margin: 1.25rem 0;
+  margin: 1.5rem 0;
   position: relative;
 }
 
@@ -123,7 +125,7 @@ p {
 
 input {
   width: 100%;
-  padding: .625rem;
+  padding: 1rem;
   margin-bottom: 1rem;
   border: 1px solid var(--borderColor);
   border-radius: var(--itemBorderradius);
@@ -149,12 +151,12 @@ input {
 }
 
 .remember-forgot input[type="checkbox"] {
-  margin-right: 8px;
-  transform: scale(1.2); /* Skala untuk menyamakan ukuran dengan teks */
+  margin-right: .5rem;
+  transform: scale(1.1); /* Skala untuk menyamakan ukuran dengan teks */
 }
 
 .remember-forgot a {
-  font-size: .8rem;
+  font-size: .9rem;
   color: var(--buttonColor);
   text-decoration: none;
 }
@@ -166,27 +168,57 @@ input {
 
 .checkbox-group {
   display: flex;
-  flex-direction: column; /* Menyusun elemen secara horizontal */
-  /* align-items: left; Membuat checkbox dan teks sejajar vertikal */
-  margin-bottom: 1rem;
-  justify-content: flex-start;
-  /* overflow: rela; */
-   /* Jarak antar grup checkbox */
+  flex-direction: row;
+  margin-bottom: 1.5rem;
 }
 
 .checkbox-group label {
-  display: flex; /* Menggunakan flexbox untuk menyusun checkbox dan teks */
-  align-items: center; /* Sejajarkan secara vertikal */
-  font-size: 0.8rem; /* Ukuran font untuk teks */
-  white-space: nowrap; /* Menghindari teks terpotong */
-  text-align: left; /* Teks rata kiri */
+  display: flex;
+  align-items: center;
+  font-size: .8rem;
+  margin-bottom: .5rem; /* Add some space between checkboxes */
 }
 
-.checkbox-group label input {
-  margin-right: 0.625rem; /* Memberikan jarak antara checkbox dan teks */
-  color: var(--buttonColor); /* Warna sesuai variabel yang ditentukan */
+.remember-forgot label {
+  display: flex;
+  align-items: baseline;
+  font-size: .8rem;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-content: center;
 }
 
+
+/* Styling untuk elemen input-checkbox */
+.input-checkbox {
+  margin-bottom: 1rem; /* Spasi bawah */
+}
+
+.input-group-text {
+  display: flex;
+  align-items: center; /* Menyelaraskan checkbox dan teks secara vertikal */
+  gap: 0.5rem; /* Spasi antara checkbox dan teks */
+}
+
+.form-check-input {
+  width: 1rem; /* Ukuran checkbox */
+  /* height: rem; Ukuran checkbox */
+  margin: 0; /* Menghapus margin default pada checkbox */
+}
+
+.syarat, .subscription {
+  font-size: 0.875rem; /* Ukuran font */
+}
+
+.syarat a, .subscription a {
+  color: var(--buttonColor); /* Warna link */
+  text-decoration: none; /* Menghapus garis bawah pada link */
+}
+
+.syarat a:hover, .subscription a:hover {
+  text-decoration: underline; /* Garis bawah saat hover */
+}
 
 button.login-btn,
 button.signup-btn {
