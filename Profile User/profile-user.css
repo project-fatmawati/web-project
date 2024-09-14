@@ -1,24 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* CSS Custom */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
     --primaryTextColor: #222831;
     --secondaryTextColor: #788181;
-  
     --secondaryColor: #427898;
     --primaryColor: #1c75a9;
     --darkColor: #000000;
     --grayColor: #424242;
-  
     --borderColor: #f5f5f5;
-    --lineColor: #ffffff;   /* opsional */
-  
-    --primaryIconColorHover:#48CFCB;
+    --lineColor: #ffffff;   /* optional */
+    --primaryIconColorHover: #48CFCB;
     --buttonColor: #229799;
-  
     --sectionPadding: 6rem 0;
     --itemBorderradius: 0.7rem;
-  
-  }
+}
 
 body {
     background-color: whitesmoke;
@@ -75,22 +71,6 @@ nav {
     color: whitesmoke;
 }
 
-.btn-outline-primary {
-    margin-right: 20px;
-    width: 100px;
-    padding: 10px 20px;
-    background-color: #427898;
-    color: whitesmoke;
-    border: none;
-    border-radius: 5px;
-    transition: #427898 0.3s ease;
-}
-
-.btn-outline-primary:hover {
-    background-color: #48cfcb;
-    color: beige;
-}
-
 .sidebar {
     width: 250px;
     height: 100vh;
@@ -118,17 +98,16 @@ nav {
     border-left: 4px solid #427898;
 }
 
-.main-content {
-    /* margin-top: 80px; */
-    margin-left: 250px;
-    padding: 30px;
+main {
+    display: block;
+    justify-content: flex-end;
+    margin: ;
 }
 
 h2 {
     font-size: 1.5rem;
     font-weight: bold;
     color: rgba(0, 0, 0, 0.8);
-    background-color: ;
 }
 
 .content-section {
@@ -140,14 +119,16 @@ h2 {
 }
 
 #catalogItems .item-card {
-    /* margin-right: 20px; */
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
+    margin-right: 100px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px;
 }
 
 .img-catalog {
-    width: 100%;
+    width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
@@ -166,17 +147,10 @@ h2 {
     background-color: #427898;
     color: white;
     border: none;
-    transition: #427898 0.3s ease, white 0.3 ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn:hover {
     background-color: #48CFCB;
     color: black;
 }
-
-/* .btn:focus, .btn:active {
-    background-color: whitesmoke !important;
-    color: black !important;
-    box-shadow: none !important;
-    outline: none !important;
-} */

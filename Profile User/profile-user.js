@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         targetSection.classList.add('active');
     }
 
-    
     links.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -25,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const defaultLink = document.querySelector('#sidebar .nav-link.active');
-    const defaultSectionId = defaultLink.getAttribute('data-target');
+    const defaultSectionId = defaultLink ? defaultLink.getAttribute('data-target') : 'personal-info';
     showSection(defaultSectionId);
 });
 
@@ -33,8 +32,8 @@ function addItem() {
     const catalogItems = document.getElementById('catalogItems');
     const newItem = document.createElement('div');
     newItem.classList.add('item-card');
-    newItem.innerHTML = 
-        `<img src="asset/image1.jpg" alt="Jaket Denim" class="img-fluid">
+    newItem.innerHTML = `
+        <img src="asset/image1.jpg" alt="Jaket Denim" class="img-fluid">
         <p>Deskripsi baju baru</p>`;
     catalogItems.appendChild(newItem);
 }
