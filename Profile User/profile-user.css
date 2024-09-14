@@ -1,9 +1,8 @@
-/* CSS Custom */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --primaryTextColor: #222831;
-    --secondaryTextColor: #788181;
+    /* --primaryTextColor: #222831;
+    --secondaryTextColor: #788181; */
     --secondaryColor: #427898;
     --primaryColor: #1c75a9;
     --darkColor: #000000;
@@ -74,12 +73,15 @@ nav {
 .sidebar {
     width: 250px;
     height: 100vh;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     z-index: 1;
-    background-color: whitesmoke;
-    padding-top: 20px;
+    background-color: rgba(245, 245, 245, 0.815);
+    padding-top: 130px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-right: 1px solid #ddd;
 }
 
 @media (min-width: 768px) {
@@ -99,6 +101,21 @@ nav {
     color: #427898;
 }
 
+@media (max-width: 992px) {
+    .sidebar {
+        display: none;
+    }
+    main {
+        margin-left: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .navbar-nav .dropdown-menu {
+        width: 250px;
+        padding: 10px;
+    }
+}
+
 .nav-link.active {
     font-weight: bold;
     background-color: whitesmoke;
@@ -107,9 +124,11 @@ nav {
 }
 
 main {
-    /* display: block;
-    justify-content: flex-end; */
-    margin-left: 0;
+    display: block;
+    justify-content: flex-end;
+    margin-left: 270px;
+    padding-right: 20px;
+    background-color: whitesmoke;
 }
 
 @media (min-width: 768px) {
@@ -123,11 +142,17 @@ main {
         position: static;
         width: 100%;
         padding-top: 20px;
+        padding-left: 0;
+        padding-right: 0;
+        height: auto;
     }
     main {
         margin-left: 0;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
+
 
 h2 {
     font-size: 1.5rem;

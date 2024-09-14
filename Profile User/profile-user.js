@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const links = document.querySelectorAll('#sidebar .nav-link');
+    const links = document.querySelectorAll('#sidebar .nav-link, .dropdown-item');
     const sections = document.querySelectorAll('.content-section');
 
     function showSection(targetId) {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const defaultLink = document.querySelector('#sidebar .nav-link.active');
+    const defaultLink = document.querySelector('#sidebar .nav-link.active') || document.querySelector('.dropdown-item.active');
     const defaultSectionId = defaultLink ? defaultLink.getAttribute('data-target') : 'personal-info';
     showSection(defaultSectionId);
 });
