@@ -36,7 +36,7 @@
                     <a class="nav-link text-black" href="homepage.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-black" href="#about.html">Tentang Kami</a>
+                    <a class="nav-link text-black hidden" href="#about.html" id="about-navbar">Tentang Kami</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-black" href="#" id="tukarBajuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -44,7 +44,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="tukarBajuDropdown">
                         <li><a class="dropdown-item text-black" href="#">Cara Tukaran</a></li>
-                        <li><a class="dropdown-item text-black" href="#">Join Member</a></li>
+                        <li><a class="dropdown-item text-black hidden" href="#" id="member-navbar">Join Member</a></li>
                         <li><a class="dropdown-item text-black" href="#">Event</a></li>
                         <li><a class="dropdown-item text-black" href="#">Donasi</a></li>
                     </ul>
@@ -55,10 +55,10 @@
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="btn btn-outline-primary" href="#">Login</a>
+                    <a class="login-navbar btn-outline-primary" href="#" id="login-navbar"></a>
                 </li>
                 <li class="nav-item">
-                    <a class="btn btn-outline-primary" href="#">Register</a>
+                    <a class="register-navbar btn-outline-primary" href="#" id="register-navbar"></a>
                 </li>
             </ul>
         </div>
@@ -71,7 +71,7 @@
   <div class="container pb-5 py-5">
     <div class="row ">
         <div class=" banner-text col-12 col-lg-7" data-aos="fade-up" data-aos-duration="2000" >
-          <h1 class="text-black fw-bold">Rajanya Barter Pakaian, <br> Siap Tukaran.</h1>
+          <h1 class="text-black fw-bold" id="hero-user">Rajanya Barter Pakaian, <br> Siap Tukaran.</h1>
           <p class="text-black pt-4">“Jadilah bagian dari Gerakan Fashion Berkelanjutan. Tukarkan Pakaianmu, Perbarui Gaya, dan Selamatkan Bumi.”</p>
           <button type="button" id="btn-banner">Mulai Tukar</button>
         </div>

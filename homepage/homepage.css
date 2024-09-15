@@ -120,11 +120,21 @@ h2 {
     color: beige;
 }
 
+.logged-in {
+    background-color: #fd0779;
+    color: #000000;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+
 
 /*SECTION HERO*/
 
 .hero-section {
-    background-color: var(--warna-tersier);
+    background-color: var(--warna-premierr);
 }
 
 .hero-section p {
