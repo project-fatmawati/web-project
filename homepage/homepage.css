@@ -120,16 +120,9 @@ h2 {
     color: beige;
 }
 
-.logged-in {
-    background-color: #fd0779;
-    color: #000000;
-  }
-
-  .hidden {
+.hidden {
     display: none;
-  }
-
-
+}
 
 /*SECTION HERO*/
 

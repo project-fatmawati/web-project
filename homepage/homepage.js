@@ -14,7 +14,7 @@ function validateEmail (){
 }
 
 
-
+//Homepage User
 
 // const users = {
 //     name : "yana",
@@ -22,13 +22,13 @@ function validateEmail (){
 //     email : "yanaudin@gmail.com",
 // };
 
-// localStorage.setItem('users', JSON.stringify(users));
-// console.log(localStorage.getItem('users')); 
-// // //hasilnya pasti dalam bentuk objek
+// // localStorage.setItem('users', JSON.stringify(users));
+// // console.log(localStorage.getItem('users')); 
+// // // //hasilnya pasti dalam bentuk objek
 
-//kita coba ambil data dan kembalikan dalam bentuk string
-// let users = JSON.parse(localStorage.getItem('users'));
-// console.log(users.name);
+// // kita coba ambil data dan kembalikan dalam bentuk string
+// // let users = JSON.parse(localStorage.getItem('users'));
+// // console.log(users.name);
 
 
 
@@ -76,6 +76,14 @@ function validateEmail (){
 //   window.onload = displayUserName;
 
 
+
+
+
+
+
+//OPSI 2
+
+
   localStorage.setItem('users', JSON.stringify({
 
     name : "yana",
@@ -85,34 +93,33 @@ function validateEmail (){
 
 function displayHomepage() {
     const storedUserData = localStorage.getItem('users'); 
-  
+
     const greetingUser = document.getElementById('hero-user');
-    const loginNav = document.getElementById('login-navbar').textContent= 'Profil';
-    const registerNav = document.getElementById('register-navbar').textContent = 'Logout'
-    const aboutNav = document.getElementById ('about-navbar');
-    const memberNav = document.getElementById ('member-navbar');
+    const loginNav = document.querySelector('#login-navbar');
+    const registerNav = document.querySelector('#register-navbar');
+    const profileDropdown = document.querySelector('#profie-dropdown');
   
       if (storedUserData) {
         const user = JSON.parse(storedUserData); // Parse user data
-        
-        //Greeting User
+
+        // Greeting User
         greetingUser.textContent = `Halo, selamat datang ${user.name}!`;
 
-       // Change Button Login (using CSS class)
-       loginNav.classList.add('logged-in'); // Add a CSS class for styling
+        // Up Profile Dropdown
+        profileDropdown.classList.remove('d-none');
 
-       // Change Button Register (using CSS class)
-       registerNav.classList.add('logged-in'); // Add a CSS class for styling
- 
-       // Hide About and Member Menus (using CSS class)
-       aboutNav.classList.add('hidden');
-       memberNav.classList.add('hidden');
+       // hidden Login
+       loginNav.classList.add('hidden')
+
+       // hidden Register
+       registerNav.classList.add('hidden');
 
       } else {
-        console.log ('Pengguna belum login')
+        console.log ("Pengguna belum login");
 
       }
-  }
+
+    }
 
   // Call the function on page load
   window.onload = displayHomepage;
@@ -120,38 +127,53 @@ function displayHomepage() {
 
 
 
+//   // Fungsi untuk Profil
 
-  // Fungsi untuk logout
-  function logout() {
-    // Tambahkan logika logout 
 
-    loginNav.textContent = "Login";
-    registerNav.textContent = "Register";
+//   // Fungsi untuk logout
+//   function logout() {
+//     // Tambahkan logika logout 
 
-    // Hapus kelas CSS yang ditambahkan saat login
-    loginNav.classList.remove('logged-in');
-    registerNav.classList.remove('logged-in');
+//     // Hapus kelas CSS yang ditambahkan saat login
+//     loginNav.classList.remove('hidden');
+//     registerNav.classList.remove('hidden');
 
-    // Tampilkan kembali menu yang disembunyikan
-    aboutNav.classList.remove('hidden');
-    memberNav.classList.remove('hidden');
+//     // Tampilkan kembali menu yang disembunyikan
+//     memberNav.classList.remove('hidden');
 
-    // Kembalikan teks sambutan ke default
-    greetingUser.textContent = "Rajanya Barter Pakaian, <br> Siap Tukaran."
+//     // Kembalikan teks sambutan ke default
+//     greetingUser.textContent = "Rajanya Barter Pakaian, <br> Siap Tukaran."
     
   
-    // Panggil kembali fungsi displayHomepage untuk memperbarui tampilan
-    displayHomepage();
+//     // Panggil kembali fungsi displayHomepage untuk memperbarui tampilan
+//     displayHomepage();
 
-      // Mendapatkan elemen tombol berdasarkan ID
-  const logoutButton = document.getElementById('register-navbar');
+//       // Mendapatkan elemen tombol berdasarkan ID
+//   const logoutButton = document.getElementById('register-navbar');
 
-    // Tambahkan event listener pada tombol logout
-    logoutButton.addEventListener('click', logout);
+//     // Tambahkan event listener pada tombol logout
+//     logoutButton.addEventListener('click', logout);
 
-    LocalStorage.removeItem('users');
-    window.location.href = 'about.html';
-  }
+//     LocalStorage.removeItem('users');
+//     window.location.href = 'about.html';
+//   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -173,5 +195,4 @@ function displayHomepage() {
 //   if (LOcalStorage.getItem('user')) {
 //     showLogoutButton();
 //   }
-
 
