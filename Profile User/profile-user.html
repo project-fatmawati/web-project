@@ -10,6 +10,9 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="profile-user.css">
+
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <!-- Navbar Section -->
@@ -26,15 +29,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Home</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="tukarBajuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Tukar Baju
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="tukarBajuDropdown">
-                            <li><a class="dropdown-item" href="#">Cara Tukar Baju</a></li>
-                            <li><a class="dropdown-item" href="#">Tambah Baju</a></li>
-                            <li><a class="dropdown-item" href="#">Cari Pakaian</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tukar Baju</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Katalog Pakaian</a>
@@ -43,6 +39,10 @@
                         <a class="nav-link" href="#">Tentang Kami</a>
                     </li>
                 </ul>
+                <div class="user-menu">
+                    <img src="photo.cat" alt="User Profile" class="user-img">
+                    <span class="user-name"></span>
+                </div>
 
                 <!-- Profil button dropdown -->
                 <ul class="navbar-nav">
@@ -159,10 +159,52 @@
                 <!-- Riwayat Transaksi -->
                 <section id="transaction-history" class="content-section d-none mt-4">
                     <h2>Riwayat Transaksi</h2>
-                    <ul class="list-group" id="transactionHistory">
-                        <!-- Menambahkan riwayat barter disini -->
-                    </ul>
-                </section>
+                    <div class="container">
+                        <div class="row">
+                            <!-- Produk 1 -->
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <img src="asset/jaket_jeans.png" alt="Jaket Jeans" class="card-img-top img-fluid" style="max-height: 250px; object-fit: cover;">
+                                    <div class="card-body">
+                                        <h6>Jaket Jeans</h6>
+                                        <p>Kondisi: Sangat Baik</p>
+                                        <p>Ukuran: M</p>
+                                        <p>Warna: Navi</p>
+                                        <div class="star-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <a href="#" class="btn btn-primary">Lihat Detail Produk</a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <!-- Produk 2 -->
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <img src="asset/image2.png" alt="Blouse Wanita" class="card-img-top img-fluid" style="max-height: 250px; object-fit: cover;">
+                                    <div class="card-body">
+                                        <h6>Blouse Wanita</h6>
+                                        <p>Kondisi: Baru</p>
+                                        <p>Ukuran: L</p>
+                                        <p>Warna: Putih</p>
+                                        <div class="star-rating">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <a href="#" class="btn btn-primary">Lihat Detail Produk</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>                
 
                 <!-- Pengaturan Akun -->
                 <section id="settings" class="content-section d-none mt-4">
