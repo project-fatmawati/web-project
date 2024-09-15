@@ -21,7 +21,7 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-nav {
+.navbar {
     position: sticky;
     top: 0;
     margin: 2px;
@@ -49,6 +49,7 @@ nav {
 .dropdown-menu {
     background-color: whitesmoke;
     border-radius: 5px;
+    z-index: 1050;
 }
 
 .dropdown-item:hover {
@@ -58,6 +59,17 @@ nav {
 .nav-link {
     font-size: 1rem;
     padding: 10px;
+}
+
+.navbar-nav .dropdown {
+    position: relative;
+}
+
+.navbar-nav .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
 }
 
 .btn-outline-primary {
@@ -75,16 +87,17 @@ nav {
     flex-direction: row;
 }
 
-#sidebar {
-    position: sticky;
+.sidebar {
+    position: relative;
     width: 250px;
     top: 0;
     height: 100vh;
     left: 0;
     z-index: 1;
     background-color: rgba(245, 245, 245, 0.815);
-    padding: 20px;
+    padding: auto;
     box-shadow: 2px 0 5px;
+    overflow-y: auto;
     border-right: 1px solid #ddddddad;
 }
 
@@ -95,8 +108,9 @@ nav {
 }
 
 @media (min-width: 768px) {
-    #sidebar {
+    .sidebar {
         position: fixed;
+        overflow-y: auto;
         width: 250px;
         padding-top: 130px;
     }
@@ -112,7 +126,7 @@ nav {
 }
 
 @media (max-width: 992px) {
-    #sidebar {
+    .sidebar {
         display: none;
     }
     main {
@@ -121,6 +135,7 @@ nav {
         padding-right: 10px;
     }
     .navbar-nav .dropdown-menu {
+        top: auto;
         width: 250px;
         padding: 10px;
     }
@@ -148,7 +163,7 @@ main {
 }
 
 @media (max-width: 767.98px) {
-    #sidebar {
+    .sidebar {
         position: static;
         width: 100%;
         padding-top: 20px;
@@ -189,21 +204,32 @@ h2 {
 
 .catalog-container {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     margin: 20px;
 }
 
 .catalog-container img {
-    width: 200px;
-    height: 200px;
+    max-width: 200px;
+    width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* #catalogItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+} */
+
 #notificationList .notification {
+    max-height: 300px;
+    overflow-y: auto;
     background-color: #fff;
     border: 1px solid #ddd;
     padding: 10px;

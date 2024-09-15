@@ -139,6 +139,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    document.getElementById('addImageButton').addEventListener('click', function() {
+        var newImage = document.createElement('img');
+        newImage.src = 'asset/...';
+        newImage.alt = 'Baju Baru';
+        newImage.classList.add('img-catalog');
+        
+        catalogItems.appendChild(newImage);
+    });
+
     // Fungsi untuk menampilkan notifikasi ketertarikan pada item di katalog
     function addInterestNotification(userName, itemName) {
         const message = `${userName} tertarik dengan baju ${itemName}`;
@@ -185,6 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadCatalogFromLocalStorage();
     loadNotifications();
 
+
     // Form untuk mengganti kata sandi
     const changePasswordForm = document.getElementById('changePasswordForm');
     if (changePasswordForm) {
@@ -193,7 +203,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const oldPassword = document.getElementById('oldPassword').value;
             const newPassword = document.getElementById('newPassword').value;
 
-            // Validasi password lama dan simpan password baru ke localStorage
             const savedPassword = loadFromLocalStorage('userPassword');
             if (oldPassword === savedPassword) {
                 saveToLocalStorage('userPassword', newPassword);
@@ -247,15 +256,5 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('pushNotification').checked = savedNotificationSettings.pushNotification;
             document.getElementById('weeklySummary').checked = savedNotificationSettings.weeklySummary;
         }
-    }
-
-    // Simulasi: Ketika pengguna lain tertarik dengan item di katalog
-    const interestButton = document.getElementById('interestButton');
-    if (interestButton) {
-        interestButton.addEventListener('click', function() {
-            const userName = "Pengguna123";
-            const itemName = "Kemeja Biru";
-            addInterestNotification(userName, itemName);
-        });
     }
 });
