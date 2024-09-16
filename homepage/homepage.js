@@ -44,15 +44,23 @@ function validateEmail (){
                 loginNav.style.display = 'none';
                 registerNav.style.display = 'none';
                 aboutNav.style.display= 'none'
+
+
+            // Arahkan pengguna ke profil
+            window.location.href = 'profile-user.html'; 
+
+            // Arahkan pengguna ke logout
+            window.location.href = 'homepage.html';
+
             } else {
                 console.log('Pengguna tidak ditemukan.');
             }
+
         } else {
             // Menampilkan pesan default jika belum login
             welcomeMessage.textContent = 'Rajanya Barter Pakaian, Siap Tukaran.';
             console.log('Pengguna belum login.');
         }
-
 
     }
   
@@ -84,6 +92,8 @@ function validateEmail (){
     document.getElementById('profileButton').addEventListener('click', function() {
         const dropdown = document.getElementById('profileDropdown');
         dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+
+        window.location.href = 'profile-user.html';
 
     });
   
