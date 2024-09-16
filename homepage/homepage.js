@@ -22,10 +22,12 @@ function validateEmail (){
         const loginNav = document.getElementById('loginNavItem');
         const registerNav = document.getElementById('registerNavItem');
         const profileNav = document.getElementById('profileNavItem');
+        const aboutNav = document.getElementById ('aboutNavItem')
         const profileDropdown = document.getElementById('profileDropdown');
         const userNameSpan = document.getElementById('userName');
         const userPhoto = document.getElementById('userPhoto');
         const welcomeMessage = document.getElementById('hero-user');
+        
   
         if (loggedInUser) {
             const users = JSON.parse(localStorage.getItem('users'));
@@ -41,6 +43,7 @@ function validateEmail (){
                 profileNav.style.display = 'block';
                 loginNav.style.display = 'none';
                 registerNav.style.display = 'none';
+                aboutNav.style.display= 'none'
             } else {
                 console.log('Pengguna tidak ditemukan.');
             }
@@ -51,6 +54,7 @@ function validateEmail (){
         }
     }
   
+
     function logout() {
         // Hapus data login
         localStorage.removeItem('loggedInUser');
@@ -59,6 +63,7 @@ function validateEmail (){
         document.getElementById('loginNavItem').style.display = 'block';
         document.getElementById('registerNavItem').style.display = 'block';
         document.getElementById('profileNavItem').style.display = 'none';
+        document.getElementById ('aboutNavItem').style.display ='block'
   
         // Ubah kembali pesan selamat datang
         document.getElementById('hero-user').textContent = 'Rajanya Barter Pakaian, Siap Tukaran.';
@@ -77,6 +82,7 @@ function validateEmail (){
     document.getElementById('profileButton').addEventListener('click', function() {
         const dropdown = document.getElementById('profileDropdown');
         dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+
     });
   
     // Tutup dropdown jika klik di luar
