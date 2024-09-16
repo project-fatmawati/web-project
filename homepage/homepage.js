@@ -13,9 +13,10 @@ function validateEmail (){
     }
 }
 
-////// DOM HOME PAGE USER /////////
+////// DOM HOMEPAGE USER /////////
 
   /// Display Homepage///
+  document.addEventListener('DOMContentLoaded', function() {
     function displayHomepage() {
         const loggedInUser = localStorage.getItem('loggedInUser');
         const loginNav = document.getElementById('loginNavItem');
@@ -49,4 +50,44 @@ function validateEmail (){
             console.log('Pengguna belum login.');
         }
     }
+  
+    function logout() {
+        // Hapus data login
+        localStorage.removeItem('loggedInUser');
+        
+        // Tampilkan kembali login/register dan sembunyikan profil
+        document.getElementById('loginNavItem').style.display = 'block';
+        document.getElementById('registerNavItem').style.display = 'block';
+        document.getElementById('profileNavItem').style.display = 'none';
+  
+        // Ubah kembali pesan selamat datang
+        document.getElementById('hero-user').textContent = 'Rajanya Barter Pakaian, Siap Tukaran.';
+  
+        // Redirect ke halaman login (opsional)
+        window.location.href = 'login.html';
+    }
+  
+    // Jalankan saat halaman dimuat
+    displayHomepage();
+  
+    // Event listener untuk tombol logout
+    document.getElementById('logout').addEventListener('click', logout);
+  
+    // Event listener untuk tombol profil
+    document.getElementById('profileButton').addEventListener('click', function() {
+        const dropdown = document.getElementById('profileDropdown');
+        dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+    });
+  
+    // Tutup dropdown jika klik di luar
+    document.addEventListener('click', function(event) {
+        const profileButton = document.getElementById('profileButton');
+        const dropdown = document.getElementById('profileDropdown');
+  
+        if (!profileButton.contains(event.target) && !dropdown.contains(event.target)) {
+            dropdown.style.display = 'none';
+        }
+    });
+  });
+  
   
