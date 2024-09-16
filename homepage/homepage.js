@@ -52,6 +52,8 @@ function validateEmail (){
             welcomeMessage.textContent = 'Rajanya Barter Pakaian, Siap Tukaran.';
             console.log('Pengguna belum login.');
         }
+
+
     }
   
 
