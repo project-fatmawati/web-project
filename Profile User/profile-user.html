@@ -16,52 +16,72 @@
 </head>
 <body>
     <!-- Navbar Section -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="asset/Logo.png" alt="Logo TukarBaju" class="logo-img">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Tukar Baju</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Katalog Pakaian</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Tentang Kami</a>
-                    </li>
-                </ul>
-                <div class="user-menu">
-                    <img src="photo.cat" alt="User Profile" class="user-img">
-                    <span class="user-name"></span>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="homepage.html">
+                    <img src="/Profile User/asset/Logo.png" alt="Logo TukarBaju" class="logo-img">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto gap-3">
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="/homepage/homepage.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="/homepage/about.html">Tentang Kami</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-black" href="#" id="tukarBajuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Informasi
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="tukarBajuDropdown">
+                                <li><a class="dropdown-item text-black" href="#">Cara Tukaran</a></li>
+                                <li><a class="dropdown-item text-black" href="#">Join Member</a></li>
+                                <li><a class="dropdown-item text-black" href="#">Event</a></li>
+                                <li><a class="dropdown-item text-black" href="#">Donasi</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#homepage.html">Katalog Pakaian</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Profil button and user menu -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item" id="loginNavItem">
+                            <a class="login-navbar btn-outline-primary" href="login.html" id="loginNavbar">Profil</a>
+                        </li>
+                        <li class="nav-item" id="profileNavItem" style="display:none">
+                            <button id="profileButton" class="btn btn-outline-primary">
+                                <img id="userPhoto" src="Asset homepage/photo_cat.png" alt="User Photo" style="width: 30px; height: 30px; border-radius: 50%;"/>
+                                <span id="userName"></span>
+                            </button>
+                            <div id="profileDropdown" class="profile-dropdown" style="display:none;">
+                                <a class="dropdown-item" href="profile-user.html">Profil</a>
+                                <a class="dropdown-item" href="#" id="logout">Logout</a>
+                            </div>
+                        </li>
+                        <!-- Dropdown for mobile screens -->
+                        <li class="nav-item dropdown d-lg-none">
+                            <a class="btn btn-outline-primary dropdown-toggle" href="#" id="mobileProfileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Profil
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="mobileProfileDropdown">
+                                <li><a class="dropdown-item" href="#">Informasi Pribadi</a></li>
+                                <li><a class="dropdown-item" href="#">Katalog Baju</a></li>
+                                <li><a class="dropdown-item" href="#">Riwayat Transaksi</a></li>
+                                <li><a class="dropdown-item" href="#">Pengaturan Akun</a></li>
+                                <li><a class="dropdown-item" href="#">Pesan dan Notifikasi</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-
-                <!-- Profil button dropdown -->
-                <ul class="navbar-nav">
-                    <li class="nav-item dropdown d-lg-none">
-                        <a class="btn btn-outline-primary dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Profil
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="profileDropdown">
-                            <li><a class="dropdown-item" href="#" data-target="personal-info">Informasi Pribadi</a></li>
-                            <li><a class="dropdown-item" href="#" data-target="catalog">Katalog Baju</a></li>
-                            <li><a class="dropdown-item" href="#" data-target="transaction-history">Riwayat Transaksi</a></li>
-                            <li><a class="dropdown-item" href="#" data-target="settings">Pengaturan Akun</a></li>
-                            <li><a class="dropdown-item" href="#" data-target="notifications">Pesan dan Notifikasi</a></li>
-                        </ul>
-                    </li>
-                </ul>
             </div>
-        </div>
-    </nav>
+        </nav>        
+    </header>
 
     <div class="container-fluid">
         <div class="row">
