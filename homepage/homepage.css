@@ -85,6 +85,7 @@ h2 {
     border-radius: 5px;
 }
 
+
 .dropdown-item:hover {
     color: #427898 !important;
 }
@@ -309,6 +310,9 @@ ion-icon {
         font-size: 4rem;
         margin-bottom:1rem;
     }
+    #profileDropdown {
+    margin:100px
+    }
 
 }
 
@@ -320,3 +324,46 @@ ion-icon {
         line-height: 1.2;   
     }
 }
+
+@media (max-width:750px) {
+
+    .card-katalog {
+        align-content: center;
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+
+@media (max-width:600px) {
+    .hero-section p {
+        font-size:18px;
+    }
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        .product p {
+            font-size: 20px;
+        }
+        .faq p {
+            font-size: 20px;
+        }
+        .newsletter p {
+            font-size: 20px;
+        }
+        #newsletter-form{
+            padding-top: 30px;
+        }
+
+        .about-text {
+            font-size: 100px;;
+        }
+
+        .contact p {
+            font-size: 5px;
+        }
+    }
+
+
+  
