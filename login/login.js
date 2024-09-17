@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
           localStorage.setItem('loggedInUser', email);
   
           // Arahkan pengguna ke homepage
-          window.location.href = 'homepage.html'; // Pastikan path benar
+          window.location.href = '../homepage/homepage.html'; // Pastikan path benar
         } else {
           alert('Email atau password salah!');
         }
