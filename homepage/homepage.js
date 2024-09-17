@@ -44,7 +44,7 @@ function validateEmail (){
                 loginNav.style.display = 'none';
                 registerNav.style.display = 'none';
                 aboutNav.style.display= 'none'
-
+                
 
             // Arahkan pengguna ke profil
             window.location.href = 'profile-user.html'; 
@@ -106,6 +106,6 @@ function validateEmail (){
             dropdown.style.display = 'none';
         }
     });
-  });
+});
   
   
