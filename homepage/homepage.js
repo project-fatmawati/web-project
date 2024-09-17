@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const userNameSpan = document.getElementById('userName');
         const userPhoto = document.getElementById('userPhoto');
         const welcomeMessage = document.getElementById('hero-user');
+        const aboutNavbar = document.getElementById('about-navbar');
   
         if (loggedInUser) {
             const users = JSON.parse(localStorage.getItem('users'));
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 profileNav.style.display = 'block';
                 loginNav.style.display = 'none';
                 registerNav.style.display = 'none';
+                aboutNavbar.style.display = 'none';
             } else {
                 console.log('Pengguna tidak ditemukan.');
             }
