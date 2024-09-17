@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
           localStorage.setItem('loggedInUser', email);
   
           // Arahkan pengguna ke homepage
-          window.location.href = 'homepage.html'; // Pastikan path benar
+          window.location.href = '../homepage/homepage.html'; // Pastikan path benar
         } else {
           alert('Email atau password salah!');
         }
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
         alert('Pendaftaran berhasil!');
   
         // Arahkan pengguna ke homepage setelah pendaftaran
-        window.location.href = 'homepage.html'; // Pastikan path benar
+        window.location.href = '../homepage/homepage.html'; // Pastikan path benar
       });
     }
   });
