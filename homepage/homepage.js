@@ -23,7 +23,7 @@ function validateEmail (){
         const registerNav = document.getElementById('registerNavItem');
         const profileNav = document.getElementById('profileNavItem');
         const aboutNav = document.getElementById ('aboutNavItem')
-        const profileDropdown = document.getElementById('profileDropdown');
+        const dropdown = document.getElementById('profileDropdown');
         const userNameSpan = document.getElementById('userName');
         const userPhoto = document.getElementById('userPhoto');
         const welcomeMessage = document.getElementById('hero-user');
@@ -47,10 +47,10 @@ function validateEmail (){
 
 
             // Arahkan pengguna ke profil
-            window.location.href = '../Profile User/profile-user.html'; 
+            window.location.href = 'profile-user.html'; 
 
             // Arahkan pengguna ke logout
-            window.location.href = '../homepage/homepage.html';
+            window.location.href = 'homepage.html';
 
             } else {
                 console.log('Pengguna tidak ditemukan.');
@@ -79,7 +79,7 @@ function validateEmail (){
         document.getElementById('hero-user').textContent = 'Rajanya Barter Pakaian, Siap Tukaran.';
   
         // Redirect ke halaman login (opsional)
-        window.location.href = '../login/login.html';
+        window.location.href = 'login.html';
     }
   
     // Jalankan saat halaman dimuat
@@ -93,7 +93,7 @@ function validateEmail (){
         const dropdown = document.getElementById('profileDropdown');
         dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
 
-        window.location.href = '../Profile User/profile-user.html';
+        window.location.href = 'profile-user.html';
 
     });
   
