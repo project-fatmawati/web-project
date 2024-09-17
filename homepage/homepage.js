@@ -47,7 +47,7 @@ function validateEmail (){
                 
 
             // Arahkan pengguna ke profil
-            window.location.href = 'profile-user.html'; 
+            window.location.href = '../profile-user/profile-user.html'; 
 
             // Arahkan pengguna ke logout
             window.location.href = 'homepage.html';
@@ -79,7 +79,7 @@ function validateEmail (){
         document.getElementById('hero-user').textContent = 'Rajanya Barter Pakaian, Siap Tukaran.';
   
         // Redirect ke halaman login (opsional)
-        window.location.href = 'login.html';
+        window.location.href = '../login/login.html';
     }
   
     // Jalankan saat halaman dimuat
@@ -93,7 +93,7 @@ function validateEmail (){
         const dropdown = document.getElementById('profileDropdown');
         dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
 
-        window.location.href = 'profile-user.html';
+        window.location.href = '../profile-user/profile-user.html';
 
     });
   
