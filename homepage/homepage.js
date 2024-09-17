@@ -44,13 +44,6 @@ function validateEmail (){
                 loginNav.style.display = 'none';
                 registerNav.style.display = 'none';
                 aboutNav.style.display= 'none'
-                
-
-            // Arahkan pengguna ke profil
-            window.location.href = '../profile-user/profile-user.html'; 
-
-            // Arahkan pengguna ke logout
-            window.location.href = 'homepage.html';
 
             } else {
                 console.log('Pengguna tidak ditemukan.');
