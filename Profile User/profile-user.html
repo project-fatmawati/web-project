@@ -20,7 +20,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="homepage.html">
-                    <img src="/Profile User/asset/Logo.png" alt="Logo TukarBaju" class="logo-img">
+                    <img src="asset/Logo.png" alt="Logo TukarBaju" class="logo-img">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -51,9 +51,6 @@
                     
                     <!-- Profil button and user menu -->
                     <ul class="navbar-nav">
-                        <li class="nav-item" id="loginNavItem">
-                            <a class="login-navbar btn-outline-primary" href="login.html" id="loginNavbar">Profil</a>
-                        </li>
                         <li class="nav-item" id="profileNavItem" style="display:none">
                             <button id="profileButton" class="btn btn-outline-primary">
                                 <img id="userPhoto" src="Asset homepage/photo_cat.png" alt="User Photo" style="width: 30px; height: 30px; border-radius: 50%;"/>
@@ -65,18 +62,20 @@
                             </div>
                         </li>
                         <!-- Dropdown for mobile screens -->
-                        <li class="nav-item dropdown d-lg-none">
-                            <a class="btn btn-outline-primary dropdown-toggle" href="#" id="mobileProfileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Profil
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="mobileProfileDropdown">
-                                <li><a class="dropdown-item" href="#">Informasi Pribadi</a></li>
-                                <li><a class="dropdown-item" href="#">Katalog Baju</a></li>
-                                <li><a class="dropdown-item" href="#">Riwayat Transaksi</a></li>
-                                <li><a class="dropdown-item" href="#">Pengaturan Akun</a></li>
-                                <li><a class="dropdown-item" href="#">Pesan dan Notifikasi</a></li>
-                            </ul>
-                        </li>
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown d-lg-none">
+                                <a class="btn btn-outline-primary dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Profil
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+                                    <li><a class="dropdown-item" href="#" data-target="personal-info">Informasi Pribadi</a></li>
+                                    <li><a class="dropdown-item" href="#" data-target="catalog">Katalog Baju</a></li>
+                                    <li><a class="dropdown-item" href="#" data-target="transaction-history">Riwayat Transaksi</a></li>
+                                    <li><a class="dropdown-item" href="#" data-target="settings">Pengaturan Akun</a></li>
+                                    <li><a class="dropdown-item" href="#" data-target="notifications">Pesan dan Notifikasi</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </ul>
                 </div>
             </div>
@@ -138,8 +137,8 @@
                 <section id="catalog" class="content-section d-none mt-4">
                     <h2>Katalog Baju</h2>
                     <div class="catalog-container">
-                        <img src="/Profile User/asset/jaket_jeans.png" alt="Jaket Denim" class="img-catalog">
-                        <img src="/Profile User/asset/image2.png" alt="Blouse Wanita" class="img-catalog">
+                        <img src="asset/jaket_jeans.png" alt="Jaket Denim" class="img-catalog">
+                        <img src="asset/image2.png" alt="Blouse Wanita" class="img-catalog">
 
                         <!-- Untuk menampilkan item katalog di sini -->
                         <div id="catalogItems" class="img-catalog">
