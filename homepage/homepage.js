@@ -23,7 +23,7 @@ function validateEmail (){
         const registerNav = document.getElementById('registerNavItem');
         const profileNav = document.getElementById('profileNavItem');
         const aboutNav = document.getElementById ('aboutNavItem')
-        const profileDropdown = document.getElementById('profileDropdown');
+        const dropdown = document.getElementById('profileDropdown');
         const userNameSpan = document.getElementById('userName');
         const userPhoto = document.getElementById('userPhoto');
         const welcomeMessage = document.getElementById('hero-user');
@@ -43,7 +43,7 @@ function validateEmail (){
                 profileNav.style.display = 'block';
                 loginNav.style.display = 'none';
                 registerNav.style.display = 'none';
-                // aboutNav.style.display= 'none'
+                aboutNav.style.display= 'none'
             } else {
                 console.log('Pengguna tidak ditemukan.');
             }
@@ -84,7 +84,7 @@ function validateEmail (){
         const dropdown = document.getElementById('profileDropdown');
         dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
 
-        window.location.href = '../Profile User/profile-user.html';
+        window.location.href = '../profile-user/profile-user.html';
 
     });
   
