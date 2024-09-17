@@ -8,8 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
 <!--CSS & Javascript-->
-    <link rel="stylesheet" type="text/css" href="homepage.css">
-    <script src="homepage.js" defer ></script>
+    <link rel="stylesheet" type="text/css" href="../homepage/homepage.css">
+    <script src="../homepage/homepage.js" defer ></script>
 
 <!--AOS-->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -33,8 +33,8 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <!-- Logo -->
-            <a class="navbar-brand" href="homepage.html">
-                <img src="/homepage/Asset homepage/Logo-nav.png" alt="Logo TukarBaju" class="logo-img">
+            <a class="navbar-brand" href="../homepage/homepage.html">
+                <img src="../homepage/Asset homepage/Logo-nav.png" alt="Logo TukarBaju" class="logo-img">
             </a>
             <!-- Toggler Button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,26 +44,26 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto gap-3">
                     <li class="nav-item">
-                        <a class="nav-link text-black" href="homepage.html">Home</a>
+                        <a class="nav-link text-black" href="../homepage/homepage.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tukar Baju</a>
+                        <a class="nav-link" href="../katalog/Katalog.html">Tukar Baju</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-black" href="#homepage.html">Katalog Pakaian</a>
+                        <a class="nav-link text-black" href="../katalog/Katalog.html">Katalog Pakaian</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-black" href="about.html" id="about-navbar">About</a>
+                        <a class="nav-link text-black" href="../homepage/about.html" id="about-navbar">About</a>
                     </li>
                 </ul>
                 <!-- Profile and Authentication Links -->
                 <ul class="navbar-nav">
                     <!-- Login and Register Links -->
                     <li class="nav-item" id="loginNavItem">
-                        <a class="login-navbar btn-outline-primary" href=".html" id="loginNavbar">Login</a>
+                        <a class="login-navbar btn-outline-primary" href="login.html" id="loginNavbar">Login</a>
                     </li>
                     <li class="nav-item" id="registerNavItem">
-                        <a class="register-navbar btn-outline-primary" href="daftar.html" id="registerNavbar">Register</a>
+                        <a class="register-navbar btn-outline-primary" href="../login/daftar.html" id="registerNavbar">Register</a>
                     </li>
                     <!-- Profile Button and Dropdown Menu -->
                     <li class="nav-item dropdown d-lg-none" id="profileNavItem" style="display:none;">
@@ -80,12 +80,12 @@
                     </li>
                     <li class="nav-item" id="profileNavItem" style="display:none;">
                         <button id="profileButton" class="btn btn-outline-primary">
-                            <img id="userPhoto" src="Asset homepage/photo_cat.png" alt="User Photo" style="width: 30px; height: 30px; border-radius: 50%;"/>
+                            <img id="userPhoto" src="../homepage/Asset homepage/photo_catt.png" alt="User Photo" style="width: 30px; height: 30px; border-radius: 50%;"/>
                             <span id="userName"></span>
                         </button>
                         <div id="profileDropdown" class="profile-dropdown" style="display:none;">
-                            <a class="dropdown-item" href="profile-user.html">Profil</a>
-                            <a class="dropdown-item" href="homepage.html" id="logout">Logout</a>
+                            <a class="dropdown-item" href="../Profile User/profile-user.html">Profil</a>
+                            <a class="dropdown-item" href="../homepage/homepage.html" id="logout">Logout</a>
                         </div>
                     </li>
                 </ul>
@@ -159,17 +159,17 @@
         <div class="container" id="contact">
             <div class="row">
                 <div class="col-12 col-lg-6 mt-2">
-                    <img  id="image-footer" src="/homepage/Asset homepage/Logo-nav.png">
+                    <img  id="image-footer" src="../homepage/Asset homepage/Logo-nav.png">
                     <p class=" text-black pt-3 pe-10" id="about-text" style="font-size:15px;">Sebuah platform yang mengajak Anda untuk berpartisipasi dalam revolusi fashion berkelanjutan. Dengan BarterStyle, Anda dapat memperpanjang umur pakai pakaian Anda, mengurangi limbah fashion, dan menemukan gaya baru yang unik.</p>
                     <a href="mailto:info@Barterstyle.com" style="font-size:15px;">info@barterstyle.com</a>
                 </div>
                 <div class="col-12 col-lg-3 mt-2 py-3">
                     <h4 class="fw-bold pb-3 text-black ">Site Link</h4>
                         <div class="sitelink d-flex flex-column text-black">
-                            <a href="#homepage.html" class="sitelink text-black" style="font-size:medium;"> Home</a>
-                            <a href="#about.html" class="sitelink-text text-black" style="font-size: medium;"> About</a>
-                            <a href="#homepage.html" class="sitelink-text text-black" style="font-size: medium;"> Event</a>
-                            <a href="#homepage.html" class="sitelink-text text-black" style="font-size: medium;"> Donasi</a>
+                            <a href="../homepage/homepage.html" class="sitelink text-black" style="font-size:medium;"> Home</a>
+                            <a href="../homepage/about.html" class="sitelink-text text-black" style="font-size: medium;"> About</a>
+                            <a href="../login/login.html" class="sitelink-text text-black" style="font-size: medium;"> Event</a>
+                            <a href="../login/login.html" class="sitelink-text text-black" style="font-size: medium;"> Donasi</a>
                         </div>
                 </div>
                 <div class="col-12 col-lg-3 mt-2 py-3">
