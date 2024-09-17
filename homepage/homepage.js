@@ -43,19 +43,10 @@ function validateEmail (){
                 profileNav.style.display = 'block';
                 loginNav.style.display = 'none';
                 registerNav.style.display = 'none';
-                aboutNav.style.display= 'none'
-                
-
-            // Arahkan pengguna ke profil
-            window.location.href = '../Profile User/profile-user.html'; 
-
-            // Arahkan pengguna ke logout
-            window.location.href = '../homepage/homepage.html';
-
+                // aboutNav.style.display= 'none'
             } else {
                 console.log('Pengguna tidak ditemukan.');
             }
-
         } else {
             // Menampilkan pesan default jika belum login
             welcomeMessage.textContent = 'Rajanya Barter Pakaian, Siap Tukaran.';
