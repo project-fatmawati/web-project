@@ -322,7 +322,7 @@ ion-icon {
     }
 }
 
-@media (max-width:750px) {
+@media (max-width:1400px) {
 
     .card-katalog {
         align-content: center;
