@@ -6,6 +6,41 @@ document.addEventListener('DOMContentLoaded', () => {
     const transactionHistory = document.getElementById('transactionHistory');
     const catalogItems = document.getElementById('catalogItems');
 
+    // Fungsi untuk menampilkan data user yang login
+    window.onload = function() {
+        // Ambil data user dari localStorage
+        const userId = localStorage.getItem('userId');
+        const userName = localStorage.getItem('userName');
+        const userAddress = localStorage.getItem('userAddress');
+        const userPhoneNumber = localStorage.getItem('userPhoneNumber');
+        const userPhoto = localStorage.getItem('userPhoto');
+
+        if (userId) {
+            // Menampilkan informasi user di halaman dashboard
+            document.getElementById('fullName').value = userName;
+            document.getElementById('address').value = userAddress;
+            document.getElementById('phoneNumber').value = userPhoneNumber;
+            document.getElementById('profilePic').src = userPhoto;
+        } else {
+            // Redirect ke halaman login jika user belum login
+            window.location.href = "../login/login.html";
+        }
+    };
+
+    // Fungsi untuk menyimpan perubahan profil user
+    function saveProfile() {
+        const fullName = document.getElementById('fullName').value;
+        const address = document.getElementById('address').value;
+        const phoneNumber = document.getElementById('phoneNumber').value;
+
+        // Simpan data yang diperbarui ke localStorage
+        localStorage.setItem('userName', fullName);
+        localStorage.setItem('userAddress', address);
+        localStorage.setItem('userPhoneNumber', phoneNumber);
+
+        alert("Profil berhasil diperbarui!");
+    }
+
     // Fungsi untuk menyembunyikan dan menampilkan section
     function showSection(targetId) {
         sections.forEach(section => {
@@ -102,6 +137,82 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    window.onload = function() {
+        const userId = localStorage.getItem('loggedInUser');
+        
+        if (!userId) {
+            // Redirect ke halaman login jika user belum login
+            window.location.href = "../login/login.html";
+        } else {
+            // Tampilkan katalog pengguna
+            displayCatalog(userId);
+        }
+    
+        // Fungsi untuk menyimpan item ke katalog
+        document.getElementById('addItemForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const itemName = document.getElementById('itemName').value;
+            const itemImage = document.getElementById('itemImage').files[0];
+    
+            if (itemImage) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const catalogItem = {
+                        name: itemName,
+                        image: event.target.result
+                    };
+    
+                    // Simpan ke localStorage
+                    saveCatalogItem(userId, catalogItem);
+                    displayCatalog(userId); // Tampilkan ulang katalog
+                    alert('Item berhasil ditambahkan!');
+                    document.getElementById('addItemForm').reset(); // Reset form
+                    const modal = bootstrap.Modal.getInstance(document.getElementById('addItemModal'));
+                    modal.hide(); // Tutup modal
+                };
+                reader.readAsDataURL(itemImage);
+            }
+        });
+    };
+    
+    // Fungsi untuk menyimpan item ke dalam katalog pengguna
+    function saveCatalogItem(userId, item) {
+        let userCatalog = JSON.parse(localStorage.getItem('catalog')) || {};
+        
+        if (!userCatalog[userId]) {
+            userCatalog[userId] = [];
+        }
+    
+        userCatalog[userId].push(item);
+        localStorage.setItem('catalog', JSON.stringify(userCatalog));
+    }
+    
+    // Fungsi untuk menampilkan katalog pengguna
+    function displayCatalog(userId) {
+        const catalogItemsContainer = document.getElementById('catalogItems');
+        catalogItemsContainer.innerHTML = '';
+    
+        let userCatalog = JSON.parse(localStorage.getItem('catalog')) || {};
+        
+        if (userCatalog[userId] && userCatalog[userId].length > 0) {
+            userCatalog[userId].forEach(item => {
+                const itemCard = document.createElement('div');
+                itemCard.className = 'col-md-4 mb-3';
+                itemCard.innerHTML = `
+                    <div class="card">
+                        <img src="${item.image}" class="card-img-top" alt="${item.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${item.name}</h5>
+                        </div>
+                    </div>
+                `;
+                catalogItemsContainer.appendChild(itemCard);
+            });
+        } else {
+            catalogItemsContainer.innerHTML = '<p>Tidak ada item di katalog Anda.</p>';
+        }
+    }
+    
     // Form untuk menambah katalog baju
     const addItemForm = document.getElementById('addItemForm');
     if (addItemForm) {

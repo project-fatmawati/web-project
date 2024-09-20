@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 profileNav.style.display = 'block';
                 loginNav.style.display = 'none';
                 registerNav.style.display = 'none';
+
                 aboutNav.style.display= 'none'
             } else {
                 console.log('Pengguna tidak ditemukan.');

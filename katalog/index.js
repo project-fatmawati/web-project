@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const stars = document.querySelectorAll('.star');
     const popup = document.getElementById('popup');
     const popupClose = document.querySelector('.popup-close');
+    const interestButtons = document.querySelectorAll('.interest-button');
+    const currentUser = "User123";
 
     // Change main image when thumbnail is clicked
     thumbnails.forEach(thumbnail => {
@@ -31,6 +33,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     favoriteButton.addEventListener('click', toggleFavorite);
 
+    interestButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const itemName = e.target.dataset.itemName; // The name of the item user is interested in
+            const itemOwner = e.target.dataset.itemOwner; // The owner of the item
+            const userName = "UserA"; // Current logged-in user
+    
+            const message = `${userName} tertarik dengan baju ${itemName}`;
+            
+            // Store the notification for the item owner
+            let ownerNotifications = JSON.parse(localStorage.getItem(itemOwner + '_notifications')) || [];
+            ownerNotifications.push(message);
+            localStorage.setItem(itemOwner + '_notifications', JSON.stringify(ownerNotifications));
+    
+            alert('Ketertarikan kamu telah dikirim ke pemilik baju!');
+        });
+    });
+    
     // Review functionality
     reviewForm.addEventListener('click', () => {
         const name = reviewerName.value.trim();
@@ -64,6 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         reviewList.appendChild(reviewElement);
     });
 
+    
     // Load saved rating
     const savedRating = localStorage.getItem('rating');
     if (savedRating) {

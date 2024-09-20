@@ -211,21 +211,12 @@ h2 {
     margin: 20px;
 }
 
-.catalog-container img {
-    max-width: 200px;
+.card-img-top {
     width: 100%;
     height: auto;
+    max-height: 300px;
     object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-/* #catalogItems {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-} */
 
 .star-rating {
     font-size: 1.5rem;
