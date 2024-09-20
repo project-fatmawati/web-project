@@ -37,6 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const logoutButton = document.getElementById('logout');
   logoutButton.addEventListener('click', function () {
       localStorage.removeItem('loggedInUser'); // Menghapus data pengguna dari localStorage
-      window.location.href = '../homepage/homepage.html'; // Redirect ke homepage
+      window.location.href = '../homepage/index.html'; // Redirect ke homepage
   });
 });
