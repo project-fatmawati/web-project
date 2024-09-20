@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('address').value = userAddress;
             document.getElementById('phoneNumber').value = userPhoneNumber;
             document.getElementById('profilePic').src = userPhoto;
+            userPhoto.src = user.photo || "../homepage/Asset homepage/photo_catt.png";
+
         } else {
             // Redirect ke halaman login jika user belum login
             window.location.href = "../login/login.html";
